@@ -10,9 +10,9 @@ I
          Uint: 'metric',
          APPID: API_KEY,
       }
-
     }); 
+    return data;
  }
 
 
- return data;
+ 

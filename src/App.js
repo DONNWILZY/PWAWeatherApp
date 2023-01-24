@@ -1,5 +1,5 @@
 import React , {useState} from 'react';
-import './App.css';
+import './app.css';
 
 
 const App = ()=>{
@@ -7,6 +7,8 @@ const App = ()=>{
     const search = async (e) =>{
         if(e.key === 'enter'){    
             const data = await fetchWeather(query)  
+            setWeather(data);
+            setQuery('')
         }
     }
     return (
@@ -16,6 +18,7 @@ const App = ()=>{
                 <div className='city'>
                     <h2 className='city-name'>
                         <span> {weather.name} </span>
+                        <sup> {weather.sys.country }</sup>
                     </h2>
 
                 </div>
